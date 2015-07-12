@@ -5,4 +5,12 @@ class WelcomeController < ApplicationController
 
   end
 
+  def ifttt_status
+    head :ok
+  end
+
+  def test
+
+  end
+
 end

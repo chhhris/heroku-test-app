@@ -6,13 +6,19 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'welcome#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  root 'welcome#index'
+
+  namespace :api do
+    namespace :v1 do
+      root 'welcome#index'
+      get '/ifttt/v1/test/status' => 'welcome#ifttt_status', as: :ifttt_status
+    end
+  end
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
