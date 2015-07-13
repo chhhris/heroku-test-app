@@ -40,3 +40,4 @@ gem 'puma'
 
 # Use debugger
 gem 'better_errors', group: [:development, :test]
+gem 'binding_of_caller', group: [:development, :test]

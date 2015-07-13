@@ -14,10 +14,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   namespace :api do
-    namespace :v1 do
-      root 'welcome#index'
-      get '/ifttt/v1/test/status' => 'welcome#ifttt_status', as: :ifttt_status
-    end
+    root  'welcome#index'
+    # get   '/ifttt/v1/test/status' => 'welcome#ifttt_status',  as: :ifttt_status
+    get   '/ifttt/v1/status'      => 'welcome#ifttt_status',      as: :ifttt_status
+    post  '/ifttt/v1/test/setup'  => 'welcome#ifttt_test_setup',  as: :ifttt_test_setup
+    post  '/ifttt/v1/triggers/any_new_expression' => 'welcome#ifttt_trigger', as: :ifttt_trigger
   end
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
