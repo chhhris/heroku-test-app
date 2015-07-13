@@ -1,8 +1,8 @@
 module Api
   class WelcomeController < ApplicationController
 
+    before_filter :get_data, only: [:ifttt_test_setup, :ifttt_trigger]
     protect_from_forgery except: :ifttt_test_setup
-    get_data
 
     # GET /welcome
     def index

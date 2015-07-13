@@ -7,7 +7,6 @@ class Welcome < ActiveRecord::Base
         "tags": "banksy, brooklyn",
         "posted_at": "2015-11-04T09:23:00-07:00",
         "created_at": Time.now.iso8601,
-        "id": SecureRandom.hex(10),
         "meta": {
           "id": SecureRandom.hex(10),
           "timestamp": 1383597267
@@ -19,7 +18,6 @@ class Welcome < ActiveRecord::Base
         "tags": "banksy, nyc",
         "posted_at": "2013-11-04T03:23:00-07:00",
         "created_at": (Time.now - 3.hours).iso8601,
-        "id": SecureRandom.hex(8),
         "meta": {
           "id": SecureRandom.hex(10),
           "timestamp": 1383580355
@@ -31,7 +29,6 @@ class Welcome < ActiveRecord::Base
         "title": "Banksy takes Paris, oui oui",
         "posted_at": "2013-11-04T03:23:00-07:00",
         "created_at": (Time.now - 1.day).iso8601,
-        "id": SecureRandom.hex(7),
         "meta": {
           "id": SecureRandom.hex(10),
           "timestamp": 1383550124
