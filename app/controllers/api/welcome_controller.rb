@@ -11,7 +11,7 @@ module Api
 
     def ifttt_status
       if request.headers["IFTTT-Channel-Key"] == ENV['IFTTT_Channel_Key']
-        render json: {}, status: 200
+        head :ok
       else
         render json: {}, status: 401
       end
